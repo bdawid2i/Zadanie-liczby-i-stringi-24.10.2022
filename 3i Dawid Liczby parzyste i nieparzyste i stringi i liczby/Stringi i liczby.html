@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Zadanie tablice2</title>
+</head>
+<body>
+    
+    <script>
+        let wielkosc_tablicy;
+    
+
+        function wprowadzanie_ilosci_liczb()
+        {
+            do
+            {
+            wielkosc_tablicy = prompt('Podaj ilość elementów, jakie chcesz wprowadzić');
+            } while(isNaN(wielkosc_tablicy));
+        }
+
+        wprowadzanie_ilosci_liczb();
+        
+        if(wielkosc_tablicy<10)
+        {
+            alert('Podałeś zbyt małą liczbę');
+            wprowadzanie_ilosci_liczb();
+        }
+        else if(wielkosc_tablicy>20)
+        {
+            alert('Podałeś zbyt dużą liczbę');
+            wprowadzanie_ilosci_liczb();
+        }
+
+        let tab = [];
+
+        let slowo;
+
+        for(let i=0;i<wielkosc_tablicy;i++)
+        {
+
+                slowo=prompt('Podaj element');
+        
+                if(slowo==Number)
+                {
+                    tab.unshift(slowo);
+                }
+                else
+                {
+                    tab.push(slowo);
+                }
+            
+
+        
+        }
+
+        for(let i=0;i<wielkosc_tablicy;i++)
+        {
+            document.write(tab[i]+" ");
+        }
+        
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
